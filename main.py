@@ -72,7 +72,7 @@ class Mainpage(Handler):
           
 class Welcome(Handler):            
     def get(self):
-        username = self.request.get('username')
+        username = self.request.get('+username')
         if valid_username(username):
             self.render('welcome.html', username = username)
         else:
